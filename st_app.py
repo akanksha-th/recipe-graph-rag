@@ -19,15 +19,15 @@ if "server_started" not in st.session_state:
 
 st.title("Knowledge Graph Builder")
 
-mode = st.selectbox("Choose input method", options=["Enter Text", "Upload .txt"])
+mode = st.selectbox("Choose input method", options=["Enter Text", "Upload file (pdf/.txt)"])
 raw_text = ""
 uploaded_file = None
 file_bytes = None
 
 if mode == "Enter Text":
     raw_text = st.text_area("Input Text")
-elif mode == "Upload .txt":
-    uploaded_file = st.file_uploader("Upload", type=["txt"])
+elif mode == "Upload file (pdf/.txt)":
+    uploaded_file = st.file_uploader("Upload", type=["txt", "pdf"])
     file_bytes = uploaded_file.read() if uploaded_file else None
 else:
     st.warning("Please enter text or upload a file.")

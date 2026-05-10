@@ -9,6 +9,7 @@ dependencies = [
     "groq>=0.37.1",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.13.1",
+    "pymupdf>=1.27.2.3",
     "python-multipart>=0.0.22",
     "pyvis>=0.3.2",
     "streamlit>=1.56.0",
